@@ -49,8 +49,6 @@ public class Mileage extends Activity implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //只要activity为可见状态，则保持设备的屏幕打开和常亮
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.mileage);
         //初始化控件
         initView();

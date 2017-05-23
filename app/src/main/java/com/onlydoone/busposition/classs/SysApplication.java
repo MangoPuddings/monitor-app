@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * Created by zhaohui on 2017/2/9.
  */
-
 public class SysApplication extends Application {
     private List<Activity> mList = new LinkedList<Activity>();
     private static SysApplication instance;
