@@ -14,6 +14,7 @@ import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageView;
@@ -114,6 +115,8 @@ public class MonitorVehicle4G extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //只要activity为可见状态，则保持设备的屏幕打开和常亮
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.monitor_vehicle);
 
         initView();
